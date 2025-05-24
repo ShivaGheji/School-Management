@@ -2,7 +2,7 @@
 
 ## Base URL
 
-`https://api.yourschoolsystem.com/v1`
+`https://school-management-sg.up.railway.app/schools`
 
 ## API Overview
 
