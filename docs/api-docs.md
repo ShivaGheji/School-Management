@@ -1,4 +1,3 @@
-````markdown
 # School Management API Documentation
 
 ## Base URL
@@ -9,7 +8,6 @@
 
 REST API for managing school locations with geospatial sorting
 
---
 
 ## Endpoints
 
@@ -27,11 +25,9 @@ REST API for managing school locations with geospatial sorting
   "latitude": 40.7128,
   "longitude": -74.0060
 }
+```
 
 ### 2. List Schools
 
 **URL**
 `GET /listSchools?latitude=12.345&longitude=-45.678`
-
-```
-````
