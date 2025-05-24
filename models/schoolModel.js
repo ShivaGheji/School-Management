@@ -10,7 +10,7 @@ export const insertSchool = async (school) => {
     );
     return result.insertId;
   } catch (error) {
-    next(error);
+    throw error;
   }
 };
 
@@ -32,6 +32,6 @@ export const getAllSchools = async (userLat, userLon) => {
     });
     return results;
   } catch (error) {
-    next(error);
+    throw error;
   }
 };
