@@ -8,13 +8,12 @@
 
 REST API for managing school locations with geospatial sorting
 
-
 ## Endpoints
 
 ### 1. Add School
 
 **URL**  
-`POST /addSchool`
+`POST /schools`
 
 **Request Body**
 
@@ -22,8 +21,8 @@ REST API for managing school locations with geospatial sorting
 {
   "name": "City High School",
   "address": "123 Main St",
-  "latitude": 40.7128,
-  "longitude": -74.0060
+  "latitude": 19.076,
+  "longitude": 72.8777
 }
 ```
 
@@ -32,31 +31,23 @@ REST API for managing school locations with geospatial sorting
 ```json
 {
   "status": "success",
-  "data": {
-    "id": 1,
-    "name": "City High School",
-    "address": "123 Main St",
-    "latitude": 40.7128,
-    "longitude": -74.0060
-  }
+  "message": "School added successfully"
 }
 ```
 
 **Error Response**
+
 ```json
 {
-  "status": "error",
-  "message": "Validation failed",
-  "errors": [
-    "Latitude must be a valid number"
-  ]
+  "success": false,
+  "message": "\"latitude\" must be a number"
 }
 ```
 
 ### 2. List Schools
 
-**URL**
-`GET /listSchools?latitude=12.345&longitude=-45.678`
+**URL**  
+`GET /schools?latitude=19.0760&longitude=72.8777`
 
 **Success Response**
 
@@ -74,9 +65,11 @@ REST API for managing school locations with geospatial sorting
   ]
 }
 ```
+
 ## Error Handling
 
 **Standard error format**
+
 ```json
 {
   "status": "error",
@@ -85,6 +78,7 @@ REST API for managing school locations with geospatial sorting
 ```
 
 **Status Codes**
+
 - 200 OK
 - 201 Created
 - 400 Bad Request
