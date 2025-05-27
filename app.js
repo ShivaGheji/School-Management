@@ -15,6 +15,10 @@ import { PORT } from "./config/env.js";
 app.use("/", schoolRoutes);
 app.use(errorMiddleware);
 
+app.get('/', (req, res) => {
+  res.send("This project is a backend API accessible via GET and POST requests through tools like Postman, with no user interface.");
+});
+
 const startServer = async () => {
   try {
     await connectToDatabase();
